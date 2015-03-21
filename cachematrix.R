@@ -23,7 +23,7 @@ makeCacheMatrix <- function(myMatrix = matrix()) {
   # 3.  Create the setInverse function: 
   getInverse <- function() myInvertedMatrix
   
-  # use the list function, to make a list of functions, so you can call the defined functions for the vector, 
+  # use the list function, to make a list of functions, so you can call the defined functions for the matrix object, 
   # ie faking good ol' OO-Programming
   list(set = set, 
        get = get, 
