@@ -61,11 +61,9 @@ cacheSolve <- function(x, ...) {
   return (myMatrix)
 }
 
-# function for testing 
-sampleRun1 <- function (myMatrix = matrix){
-  myrows = c(1, 2)
-  mycolumns = c(5, 6)
-  oMatrix = rbind (myrows, mycolumns)
+sampleRun1 <- function (){
+
+  oMatrix = rbind(c(1, 1978), c(25, 87))
   m = makeCacheMatrix(oMatrix)
   
   message(m$get())
@@ -76,13 +74,12 @@ sampleRun1 <- function (myMatrix = matrix){
   message("Attemp 2: ")
     output <- cacheSolve(m) 
     output
+  
 }
 
-# function for testing 
-sampleRun2 <- function (myMatrix = matrix){
-  myrows = c(1, -1/4)
-  mycolumns = c(-1/4, 1)
-  oMatrix = rbind (myrows, mycolumns)
+sampleRun2 <- function (){
+  
+  oMatrix = rbind(c(1/3, -1/4), c(-1/5, 1/8))
   m = makeCacheMatrix(oMatrix)
   message(m$get()) 
   
@@ -97,22 +94,21 @@ sampleRun2 <- function (myMatrix = matrix){
 # > source('/ProgrammingAssignment2/cachematrix.R')
 #	> sampleRun1()
 #	Gets the value of the matrix: 
-#	1526
+#	125197887
 #	Attemp 1: 
 #	No cache found: running solve() function 
 #	Attemp 2: 
 #	Cache found: getting cached data
-#	     myrows mycolumns
-#	[1,]  -1.50      0.50
-#	[2,]   1.25     -0.25
+#	              [,1]          [,2]
+#	[1,] -0.0017624537  4.007050e-02
+#	[2,]  0.0005064522 -2.025809e-05
 #	> sampleRun2()
 #	Gets the value of the matrix: 
-#	1-0.25-0.251
+#	0.333333333333333-0.2-0.250.125
 #	Attemp 1: 
 #	No cache found: running solve() function 
 #	Attemp 2: 
 #	Cache found: getting cached data
-#	        myrows mycolumns
-#	[1,] 1.0666667 0.2666667
-#	[2,] 0.2666667 1.0666667
-
+#	     [,1] [,2]
+#	[1,]  -15  -30
+#	[2,]  -24  -40
