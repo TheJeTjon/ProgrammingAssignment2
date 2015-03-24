@@ -20,7 +20,7 @@ makeCacheMatrix <- function(myMatrix = matrix()) {
   # 3.  Create the setInverse function: 
   setInverse <- function(solve) myInvertedMatrix <<- solve
   
-  # 3.  Create the setInverse function: 
+  # 4.  Create the getInverse function: 
   getInverse <- function() myInvertedMatrix
   
   # use the list function, to make a list of functions, so you can call the defined functions for the matrix object, 
